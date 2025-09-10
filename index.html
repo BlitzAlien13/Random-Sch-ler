@@ -38,7 +38,7 @@
       padding: 15px;
       border-radius: 12px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-      width: 150px;
+      width: 180px;
     }
     .gruppe h2 {
       margin-bottom: 10px;
@@ -74,6 +74,8 @@
       "Quirin", "Rosa", "Sophia", "Tim", "Ursula"
     ];
 
+    const gruppenNamen = ["Aufbau", "Verkauf", "Abbau"];
+
     function mischen(array) {
       return array.sort(() => Math.random() - 0.5);
     }
@@ -101,7 +103,7 @@
       gruppen.forEach((gruppe, index) => {
         const div = document.createElement("div");
         div.className = "gruppe";
-        div.innerHTML = `<h2>Gruppe ${index + 1}</h2>`;
+        div.innerHTML = `<h2>${gruppenNamen[index]}</h2>`;
         const ul = document.createElement("ul");
         gruppe.forEach(name => {
           const li = document.createElement("li");
